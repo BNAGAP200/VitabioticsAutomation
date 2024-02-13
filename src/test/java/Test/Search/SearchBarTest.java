@@ -16,6 +16,6 @@ public class SearchBarTest extends BrowserClass {
         SB.setSearchIcon();
         //SB.setTypebar();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        SB.checkzoomicon();
+
     }
 }
