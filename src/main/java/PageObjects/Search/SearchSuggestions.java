@@ -34,8 +34,8 @@ public class SearchSuggestions {
         searchIcon.click();
     }
 
-    public void setTypebar() {
-        typebar.sendKeys("Vitamins");
+    public void setTypebar(String product) {
+        typebar.sendKeys(product);
     }
 
     public void setSuggestionlists() {

@@ -21,13 +21,9 @@ public class SearchBarTest extends BrowserClass {
         SB.setSearchIcon();
     }
 
-    @And("Web page allows the user to type")
-    public void webPageAllowsTheUserToType() {
-        System.out.println(driver.getTitle());
-    }
 
-    @Then("User type as Vitamins")
-    public void userTypeAsVitamins() {
-        System.out.println(driver.getTitle());
+    @Then("Web page allows the user to type as Vitamins")
+    public void webPageAllowsTheUserToTypeAsVitamins() {
+        SB.setTypebar();
     }
 }

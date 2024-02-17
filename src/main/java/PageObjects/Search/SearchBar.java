@@ -19,10 +19,11 @@ public class SearchBar {
 
     public void setSearchIcon() {
         searchIcon.click();
+
+    }
+
+    public void setTypebar(){
         typebar.sendKeys("Vitamins");
     }
-}
-    /*public void setTypebar(){
-        System.out.println(typebar.getText());
-    }*/
 
+}
