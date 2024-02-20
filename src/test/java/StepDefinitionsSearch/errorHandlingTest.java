@@ -10,8 +10,8 @@ import org.openqa.selenium.WebDriver;
 
 
 public class errorHandlingTest extends BrowserClass {
-    WebDriver driver = setupBrowser();
-    Errorhandling EH = new Errorhandling(driver);
+   WebDriver driver = setupBrowser();
+   Errorhandling EH = new Errorhandling(driver);
     @Given("the User navigates to the Home Page")
     public void theUserNavigatesToTheHomePage() {
         System.out.println(driver.getTitle());

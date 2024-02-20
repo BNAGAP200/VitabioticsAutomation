@@ -13,6 +13,8 @@ public class VerifyMoreFunctionality {
 
     @FindBy(xpath = "//input[@class='search__input snize-input-style']")
     public WebElement typebar;
+    @FindBy(xpath = "//span[normalize-space()='View all 23 items']")
+    public WebElement viewallitems;
 
     @FindBy(xpath = "//li[@class='snize-page snize-view-all-pages snize-ac-even']")
     public WebElement MoreIcon;
@@ -27,6 +29,7 @@ public class VerifyMoreFunctionality {
     public void setTypebar(){
         typebar.sendKeys("Pregnancy");
     }
+
     public void setMoreIcon(){
         MoreIcon.click();
         System.out.println(driver.getTitle());
