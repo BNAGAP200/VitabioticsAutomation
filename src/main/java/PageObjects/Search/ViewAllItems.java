@@ -1,10 +1,15 @@
 package PageObjects.Search;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 public class ViewAllItems {
@@ -33,6 +38,21 @@ public class ViewAllItems {
 
     public void setSearchIcon() {
         searchIcon.click();
+        File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+        // Define the destination file path
+        String destinationFilePath = "screenshot.png";
+
+        // Copy the screenshot file to the destination location
+        try {
+            FileUtils.copyFile(screenshotFile, new File(destinationFilePath));
+            System.out.println("Screenshot saved successfully: " + destinationFilePath);
+        } catch (IOException e) {
+            System.out.println("Unable to save screenshot: " + e.getMessage());
+        }
+
+        // Close the browser
+
     }
 
     public void setTypebar(String s) {
