@@ -15,7 +15,7 @@ public class ThroughShopBrandTest extends BrowserClass {
     @Given("The User landed on the home page")
     public void theUserLandedOnTheHomePage() {
         System.out.println(driver.getTitle());
-        SB.setPregnacareBrand();
+
     }
 
     @And("The user clicks on the one of the brand")
@@ -36,5 +36,12 @@ public class ThroughShopBrandTest extends BrowserClass {
     @Then("The user click on the Add symbol")
     public void theUserClickOnTheAddSymbol() {
         SB.setAddSymbol();
+        SB.setAddtocartbutton();
+
+    }
+
+
+    @And("The user clicks on the shop kids button")
+    public void theUserClicksOnTheShopKidsButton() {
     }
 }

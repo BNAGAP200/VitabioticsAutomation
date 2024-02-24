@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 import org.openqa.selenium.interactions.Actions;
 
 @CucumberOptions(
-        features = {"src/test/resources/AddProductFeature/AddProductByBrand.feature"},
+        features = {"src/test/resources/AddProductFeature/AddProductByShopKids.feature"},
     //   tags = "@ShopMen",
         glue = {"StepDefinitionAddProduct"}
 )
