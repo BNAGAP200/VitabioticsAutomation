@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 
 
-public class errorHandlingTest extends BrowserClass {
+public class ErrorhandlingPageTest extends BrowserClass {
    WebDriver driver = setupBrowser();
    Errorhandling EH = new Errorhandling(driver);
     @Given("the User navigates to the Home Page")
