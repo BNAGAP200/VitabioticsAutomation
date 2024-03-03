@@ -8,6 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 public class Invalidcred {
     public final WebDriver driver;
 
+
+
     @FindBy(xpath = "//a[@aria-label='my account']")
     public WebElement ClickregIcon;
 
@@ -27,6 +29,7 @@ public class Invalidcred {
     }
     public  void setCustomeremail(String email){
        Customeremail.sendKeys(email);
+
     }
     public void setCustomerpassword(String Password){
         customerpassword.sendKeys(Password);

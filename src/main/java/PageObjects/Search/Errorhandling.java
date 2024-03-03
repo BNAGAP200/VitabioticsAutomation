@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Errorhandling {
-    private final WebDriver driver ;
+    public final WebDriver driver ;
     @FindBy(xpath = "//a[@aria-label='search']")
     public WebElement searchIcon;
 

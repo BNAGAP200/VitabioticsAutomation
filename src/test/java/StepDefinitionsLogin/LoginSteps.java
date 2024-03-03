@@ -11,8 +11,10 @@ import org.testng.Assert;
 
 public class LoginSteps extends BrowserClass {
 
-    WebDriver driver = setupBrowser();
+    WebDriver driver= setupBrowser();
     Validcred vc = new Validcred(driver);
+
+
     @Given("I am on the login page")
     public void iAmOnTheLoginPage() {
         vc.setClickregIcon();

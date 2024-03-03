@@ -20,6 +20,8 @@ public class Throughshopkids {
     public WebElement Addtocart;
     @FindBy(xpath ="(//a[@class='item__title'][normalize-space()='Wellbaby Multi-vitamin Liquid'])[1]")
     public WebElement ProductName;
+    @FindBy(xpath = "//div[@class='quantity__plus quantity__button']")
+    public WebElement AddSymbol;
 
     public Throughshopkids (WebDriver driver ){
         PageFactory.initElements(driver,this);

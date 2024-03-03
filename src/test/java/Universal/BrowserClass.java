@@ -21,7 +21,7 @@ public class BrowserClass {
     @Test
     public static WebDriver setupBrowser() {
         // Set the path to the Edge WebDriver executable
-        System.setProperty("webdriver.edge.driver", "C:\\Users\\balaj\\Downloads\\edgedriver_win64\\msedgedriver.exe");
+        System.setProperty("webdriver.edge.driver", "C:\\Program Files\\msedgedriver.exe");
         WebDriver driver = new EdgeDriver();
         driver.get("https://www.vitabiotics.com/");
         driver.manage().window().maximize();

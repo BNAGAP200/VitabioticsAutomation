@@ -8,14 +8,20 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 
-public class InvalidLoginSteps extends BrowserClass {
-    WebDriver driver = setupBrowser();
-    Invalidcred inv = new Invalidcred(driver);
+public class invalidloginsteps extends BrowserClass {
+
+    WebDriver driver;
+    Invalidcred inv;
+
+    // Constructor to initialize driver and Invalidcred object
+    public invalidloginsteps() {
+        driver = setupBrowser();
+        inv = new Invalidcred(driver);
+    }
+
     @Given("I am on the Login page")
     public void iAmOnTheLoginPage() {
-        Invalidcred inv = new Invalidcred(driver);
-
-
+        System.out.println(driver.getTitle());
     }
 
     @And("I enter reg button")
@@ -34,3 +40,5 @@ public class InvalidLoginSteps extends BrowserClass {
         inv.setClicksignin();
     }
 }
+
+

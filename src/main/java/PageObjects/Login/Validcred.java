@@ -1,7 +1,7 @@
 package PageObjects.Login;
 
 
-import org.openqa.selenium.OutputType;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,29 +16,34 @@ public class Validcred {
     public WebElement ClickregIcon;
 
     @FindBy(id = "CustomerEmail")
-    public WebElement Customeremail ;
+    public WebElement Customeremail;
 
-    @FindBy(id="CustomerPassword")
+    @FindBy(id = "CustomerPassword")
     public WebElement customerpassword;
     @FindBy(xpath = "//button[normalize-space()='Sign In']")
     public WebElement clicksignin;
-    public Validcred (WebDriver driver){
-        PageFactory.initElements(driver,this);
+
+    public Validcred(WebDriver driver) {
+        PageFactory.initElements(driver, this);
         this.driver = driver;
     }
-    public void setClickregIcon(){
+
+    public void setClickregIcon() {
         ClickregIcon.click();
     }
-public  void setCustomeremail(){
+
+    public void setCustomeremail() {
         Customeremail.sendKeys("Unknownuser@mail.com");
 
 
-}
-public void setCustomerpassword(){
+    }
+
+    public void setCustomerpassword() {
         customerpassword.sendKeys("Unknownuser123!");
-}
-public void setClicksignin(){
+    }
+
+    public void setClicksignin() {
         clicksignin.click();
-    System.out.println(driver.getTitle());
-}
+        System.out.println(driver.getTitle());
+    }
 }
