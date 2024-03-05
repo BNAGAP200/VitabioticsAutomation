@@ -1,14 +1,14 @@
 package PageObjects.AddProducts;
 
 import PageObjects.Login.Validcred;
-import PageObjects.Search.SearchBar;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 public class E2EAddproduct extends  Validcred{

@@ -1,8 +1,7 @@
 package StepDefinitionAddProduct;
 
 import PageObjects.AddProducts.ThroughSearchMethod;
-import PageObjects.AddProducts.ThroughShopMenMethod;
-import PageObjects.AddProducts.Throughshopkids;
+
 import Universal.BrowserClass;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
