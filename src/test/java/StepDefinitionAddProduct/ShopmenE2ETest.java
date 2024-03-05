@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package StepDefinitionAddProduct;
 
 import PageObjects.AddProducts.ShopMenE2EFunctionality;
@@ -49,4 +50,7 @@ public class ShopmenE2ETest extends BrowserClass {
     public void userClicksOnTheBrandButton() {
         SMe2e.setBrandsBtn();
     }
+=======
+package StepDefinitionAddProduct;public class ShopmenE2ETest {
+>>>>>>> main/master
 }
