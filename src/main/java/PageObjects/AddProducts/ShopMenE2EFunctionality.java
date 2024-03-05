@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 package PageObjects.AddProducts;
+
 
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -109,7 +109,4 @@ public class ShopMenE2EFunctionality {
         }
     }
 }
-=======
-package PageObjects.AddProducts;public class ShopMenE2EFunctionality {
-}
->>>>>>> main/master
+

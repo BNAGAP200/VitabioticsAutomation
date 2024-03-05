@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(
-        features = {"src/test/resources/AddProductFeature/ShopmenE2E.feature"},
+        features = {"src/test/resources/AddProductFeature/E2EAddProduct.feature"},
      //  tags = "@sanity",
         glue = {"StepDefinitionAddProduct"}
 )
