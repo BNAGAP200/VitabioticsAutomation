@@ -18,7 +18,7 @@ public class Validcred {
     @FindBy(id = "CustomerEmail")
     public WebElement Customeremail;
 
-    @FindBy(id = "CustomerPassword")
+    @FindBy(xpath ="//input[@id='CustomerPassword']")
     public WebElement customerpassword;
     @FindBy(xpath = "//button[normalize-space()='Sign In']")
     public WebElement clicksignin;
@@ -39,11 +39,13 @@ public class Validcred {
     }
 
     public void setCustomerpassword() {
-        customerpassword.sendKeys("Unknownuser123!");
+        customerpassword.sendKeys("Unknown123");
     }
 
     public void setClicksignin() {
         clicksignin.click();
         System.out.println(driver.getTitle());
     }
+
+
 }

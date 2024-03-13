@@ -48,5 +48,8 @@ public class ShopmenE2ETest extends BrowserClass {
     @Then("User Clicks on the Brand button")
     public void userClicksOnTheBrandButton() {
         SMe2e.setBrandsBtn();
+        SMe2e.setBuynow1();
+
+       SMe2e.setItem();
     }}
 

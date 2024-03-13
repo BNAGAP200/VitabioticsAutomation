@@ -1,7 +1,7 @@
 Feature: E2E Functionality
-  Scenario: verifying E2E functionality Shop men
+  Background: Given The User landed on the home page
 
-    Given User Landed on the Home page
+  Scenario: verifying E2E functionality Shop men
     And User click on the Shop men Button
     And User on the Product Page
     And User Clicks on the Gluten free Radio button

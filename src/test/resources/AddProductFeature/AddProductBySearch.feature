@@ -1,6 +1,7 @@
 Feature: Verify add product
+  Background: Given The User landed on the home page
   Scenario: Verifying Add product through search bar Functionality
-    Given The user navigates to the Vitabiotics Home page
+
     And The user click on the search icon
     And Web page allow the user to type search bar
     And The Web page allows the users to click on desired product

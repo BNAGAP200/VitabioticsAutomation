@@ -22,10 +22,6 @@ public class NodetailsLoginsteps extends BrowserClass {
 
     }
 
-    @And("User click on the Login Button")
-    public void userClickOnTheLoginButton() {
-
-    }
 
     @When("User Enter No username and No Password")
     public void userEnterNoUsernameAndNoPassword() {

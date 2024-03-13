@@ -13,7 +13,16 @@ import java.util.List;
 
 public class E2EAddproduct extends  Validcred{
     public final WebDriver driver;
+    @FindBy(xpath = "//a[@aria-label='my account']")
+    public WebElement ClickregIcon;
 
+    @FindBy(id = "CustomerEmail")
+    public WebElement Customeremail;
+
+    @FindBy(xpath ="//input[@id='CustomerPassword']")
+    public WebElement customerpassword;
+    @FindBy(xpath = "//button[normalize-space()='Sign In']")
+    public WebElement clicksignin;
 
 @FindBy(xpath = "(//ul[@id='snize-ac-items-container-2'])//li[2]")
 public WebElement product;
@@ -48,6 +57,8 @@ public List<WebElement> crossselling;
         this.driver = driver;
     }
     public  void login(){
+
+
         Validcred vc = new Validcred(driver);
         vc.setClickregIcon();
         vc.setCustomeremail();

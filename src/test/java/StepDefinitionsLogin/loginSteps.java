@@ -9,10 +9,12 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-public class LoginSteps extends BrowserClass {
+
+public class loginSteps extends BrowserClass {
 
     WebDriver driver= setupBrowser();
     Validcred vc = new Validcred(driver);
+
 
 
     @Given("I am on the login page")
@@ -25,14 +27,15 @@ public class LoginSteps extends BrowserClass {
     public void iEnterValidUsernameAndPassword() {
         vc.setCustomeremail();
         vc.setCustomerpassword();
-
     }
+
 
 
     @And("I click the sign-in button")
     public void iClickTheSignInButton () {
         vc.setClicksignin();
     }
+
 
     @Then("I should be logged in")
     public void iShouldBeLoggedIn () {

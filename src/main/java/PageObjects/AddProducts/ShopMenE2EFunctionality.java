@@ -3,14 +3,21 @@ package PageObjects.AddProducts;
 
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import javax.lang.model.element.Element;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class ShopMenE2EFunctionality {
     public final WebDriver driver;
@@ -25,8 +32,14 @@ public class ShopMenE2EFunctionality {
     public WebElement veganbtn;
     @FindBy(xpath = "(//span[@class='plpNavItem__checkbox'])[11]")
     public WebElement Vegeterianbtn;
-    @FindBy(xpath ="(//div[@class='plpNav__item-wrap plpNav__item-text plpNav__item-border'])[1]//div")
+    @FindBy(xpath = "//span[@class='plpNavItem__checkbox']")
     public List<WebElement> BrandsBtn;
+    @FindBy(xpath = "(//div[@class='best-seller-content']//div[normalize-space()='BUY NOW'])[1]")
+    public WebElement Buynow1;
+    @FindBy(xpath = "//div[@data-add-to-cart='29083738505285']")
+    public WebElement Buynow2;
+    @FindBy(className = "plpItem__img")
+    public List<WebElement> Item;
 
     public ShopMenE2EFunctionality(WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -93,9 +106,10 @@ public class ShopMenE2EFunctionality {
         }
         Vegeterianbtn.click();
     }
-    public  void setBrandsBtn(){
 
-        for (WebElement BrandsList : BrandsBtn){
+    public void setBrandsBtn() {
+
+        for (WebElement BrandsList : BrandsBtn) {
             BrandsList.click();
             for (int i = 0; i < Productlist.size(); i++) {
                 WebElement product = Productlist.get(i);
@@ -108,5 +122,41 @@ public class ShopMenE2EFunctionality {
 
         }
     }
+
+    public void setBuynow1() {
+        try {
+            Buynow1.click();
+            addToCartAndScroll();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void addToCartAndScroll() {
+        E2EAddproduct E2e = new E2EAddproduct(driver);
+        E2e.MinicartButton.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0, 1000);");
+
+    }
+
+    public void setItem() {
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        for (WebElement BrandsList1 : BrandsBtn) {
+            BrandsList1.click();
+            for (int i = 0; i < Item.size(); i++) {
+
+                Actions act = new Actions(driver);
+                act.keyDown(Keys.CONTROL).click(Item.get(i)).keyUp(Keys.CONTROL).build().perform();
+                ArrayList<String> ararylinks = new ArrayList<>(driver.getWindowHandles());
+                driver.switchTo().window(ararylinks.get(i));
+                String PageTitle = driver.getTitle();
+                System.out.println(PageTitle);
+            }
+        }
+    }
 }
+
+
+
 
