@@ -2,6 +2,7 @@ package StepDefintionsToolTip;
 
 import PageObjects.ToolTip.ToolTip;
 import Universal.BrowserClass;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,8 +23,28 @@ public class Tooltip1 extends BrowserClass {
 
     }
 
-    @Then("List of product should show")
+    @And("List of product should show")
     public void listOfProductShouldShow() {
         TP.setAllproducts();
+    }
+
+    @And("User hover the mouse to Women Section will show the list of products")
+    public void userHoverTheMouseToWomenSectionWillShowTheListOfProducts() {
+        TP.setWomenProduct();
+    }
+
+    @And("User hover the mouse to men Section will show the list of products")
+    public void userHoverTheMouseToMenSectionWillShowTheListOfProducts() {
+        TP.setMensection();
+    }
+
+    @And("User hover the mouse to kids Section will show the list of products")
+    public void userHoverTheMouseToKidsSectionWillShowTheListOfProducts() {
+        TP.setKidssection();
+    }
+
+    @Then("User hover the mouse to older people Section will show the list of products")
+    public void userHoverTheMouseToOlderPeopleSectionWillShowTheListOfProducts() {
+        TP.setAdult50section();
     }
 }
